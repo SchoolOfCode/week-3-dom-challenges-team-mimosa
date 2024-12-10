@@ -13,3 +13,29 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+
+//Plan
+//select id "colorPicker"✅
+//grab canvas id✅
+//event listener for click
+//create function that will reflect choosen color
+
+const colorPicker = document.getElementById("colorPicker");
+
+const canvas = document.getElementById("canvas");
+
+function changeCanvas(){
+canvas.style.backgroundColor = colorPicker.value
+
+}
+colorPicker.addEventListener("click", changeCanvas)
+
+
+/*
+let button  = getElementById("my button")
+button.addEventListener("click", function()){
+          alert ("Button clicked")
+});
+
+*/
