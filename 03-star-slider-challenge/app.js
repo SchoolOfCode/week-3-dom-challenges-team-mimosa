@@ -5,7 +5,8 @@ Learning Objectives:
   3. Enhance understanding of event-driven programming.
 
 Brief:
-You're provided with a slider (ranging from 1 to 5) and an empty space to populate star icons. Your task is to create or remove stars dynamically based on the value of the slider.
+You're provided with a slider (ranging from 1 to 5) and an empty space to populate star icons. 
+Your task is to create or remove stars dynamically based on the value of the slider.
 
 Expected Outcomes:
   1. The number of star icons should match the slider's value.
@@ -13,3 +14,26 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+
+//Grab the sliding input (id: "starSlider")
+const sliding_input = document.getElementById("starSlider");
+//Grab the star element
+const star_group = document.getElementById("stars");
+const star_element = star_group.firstChild;
+const clone = star_element.cloneNode(true);
+
+function test ()  {
+  console.log(star_element);
+}
+
+
+sliding_input.addEventListener("change",test)
+//create function to add or remove star elements based on slider value
+// function clearAndAddNewStars() {
+//   star_element.remove
+//   for (let i = 0; i < sliding_input.value; i++) {
+//     star_clone.add
+//   }
+// }
+//Write eventlistener to detect changes
