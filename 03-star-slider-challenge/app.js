@@ -33,11 +33,3 @@ function updateStars(){
 
 //Write eventlistener to detect changes
 sliding_input.addEventListener("change",updateStars)
-
-
-// function clearAndAddNewStars() {
-//   star_element.remove
-//   for (let i = 0; i < sliding_input.value; i++) {
-//     star_clone.add
-//   }
-// }
