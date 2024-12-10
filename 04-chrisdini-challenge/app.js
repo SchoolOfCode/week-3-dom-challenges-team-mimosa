@@ -27,7 +27,7 @@ function makeChrisDisappear() {
 //create function to increase opacity
 function makeChrisAppear(){
   chris_image.style.opacity = 1;
-} 
+}
 
 //create an event listner that responds to hovering
 chris_image.addEventListener("mouseenter",makeChrisDisappear);
