@@ -13,3 +13,30 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+//grab door 1 and door 2
+
+const door_group = document.querySelector(".doors");
+let door_1 = door_group.children[0];
+let door_2 = door_group.children[1];
+
+//build a random number function so outcome will be random
+function randomNumber() {
+  const generator = Math.floor(Math.random()*2 + 1);
+  return generator  ;
+}
+
+// build a function to open the doors to a randomised outcome between two photos 
+function openResults(door_1,door_2) {
+  if (randomNumber() == 1){
+    door_1.src= "door-open-empty.png";
+    door_2.src= "door-open-loz.png";
+  } else {
+    door_1.src= "door-open-loz.png";
+    door_2.src= "door-open-empty.png";
+  }
+};
+
+// build two event listeners to respond to a click on either door.
+door_1.addEventListener("click",() => openResults(door_1,door_2));
+door_2.addEventListener("click",() => openResults(door_1,door_2));
