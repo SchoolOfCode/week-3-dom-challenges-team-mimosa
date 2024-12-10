@@ -20,20 +20,24 @@ Expected Outcomes:
 const sliding_input = document.getElementById("starSlider");
 //Grab the star element
 const star_group = document.getElementById("stars");
-const star_element = star_group.firstChild;
-const clone = star_element.cloneNode(true);
+const star_element = document.querySelector("#stars > span")
 
-function test ()  {
-  console.log(star_element);
+//create function to add or remove star elements based on slider value
+function updateStars(){
+  star_group.innerHTML = "";
+  for (let i = 0;i < sliding_input.value;i++) {
+    const clone = star_element.cloneNode(true);
+    star_group.appendChild(clone);
+  }
 }
 
+//Write eventlistener to detect changes
+sliding_input.addEventListener("change",updateStars)
 
-sliding_input.addEventListener("change",test)
-//create function to add or remove star elements based on slider value
+
 // function clearAndAddNewStars() {
 //   star_element.remove
 //   for (let i = 0; i < sliding_input.value; i++) {
 //     star_clone.add
 //   }
 // }
-//Write eventlistener to detect changes
